@@ -1,7 +1,7 @@
 package com.exercise.consumerapp.controller;
 
 import com.exercise.consumerapp.consumer.MyTopicConsumer;
-import com.exercise.consumerapp.models.KafkaMessage;
+import com.exercise.consumerapp.models.DataSchema;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +15,7 @@ public class KafkaController {
         this.myTopicConsumer = myTopicConsumer;
     }
     @GetMapping("/kafka/messages")
-    public List<KafkaMessage> getMessages() {
+    public List<DataSchema> getMessages() {
         return myTopicConsumer.getMessages();
     }
 
